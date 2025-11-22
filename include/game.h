@@ -14,6 +14,12 @@ typedef struct {
     Level level;
     bool running;
     double last_time;
+    float camera_x;
+    float camera_y;
+    float spawn_x;
+    float spawn_y;
+    bool paused;
+    bool victory;
 } Game;
 
 // Initialize game
