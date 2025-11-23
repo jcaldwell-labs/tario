@@ -5,9 +5,9 @@
 
 // Terminal state
 typedef struct {
-    struct termios orig_termios;
-    int width;
-    int height;
+  struct termios orig_termios;
+  int width;
+  int height;
 } Terminal;
 
 // Initialize terminal in raw mode

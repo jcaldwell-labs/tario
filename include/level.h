@@ -7,20 +7,20 @@
 #define LEVEL_HEIGHT 50
 
 typedef enum {
-    TILE_EMPTY = ' ',
-    TILE_GROUND = '#',
-    TILE_BRICK = '=',
-    TILE_COIN = 'o',
-    TILE_SPIKE = '^',
-    TILE_GOAL = 'F',         // Flag
-    TILE_PLATFORM = '-',     // One-way platform (can jump through from below)
-    TILE_QUESTION = '?',     // Question block (can be hit from below for coin)
-    TILE_PIPE_LEFT = '[',
-    TILE_PIPE_RIGHT = ']'
+  TILE_EMPTY = ' ',
+  TILE_GROUND = '#',
+  TILE_BRICK = '=',
+  TILE_COIN = 'o',
+  TILE_SPIKE = '^',
+  TILE_GOAL = 'F',     // Flag
+  TILE_PLATFORM = '-', // One-way platform (can jump through from below)
+  TILE_QUESTION = '?', // Question block (can be hit from below for coin)
+  TILE_PIPE_LEFT = '[',
+  TILE_PIPE_RIGHT = ']'
 } TileType;
 
 typedef struct {
-    TileType tiles[LEVEL_HEIGHT][LEVEL_WIDTH];
+  TileType tiles[LEVEL_HEIGHT][LEVEL_WIDTH];
 } Level;
 
 // Initialize a test level

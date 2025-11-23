@@ -5,13 +5,13 @@
 
 // Screen buffer for double buffering
 typedef struct {
-    char *buffer;
-    int width;
-    int height;
+  char *buffer;
+  int width;
+  int height;
 } ScreenBuffer;
 
 // Create a new screen buffer
-ScreenBuffer* screen_buffer_create(int width, int height);
+ScreenBuffer *screen_buffer_create(int width, int height);
 
 // Free screen buffer
 void screen_buffer_free(ScreenBuffer *sb);

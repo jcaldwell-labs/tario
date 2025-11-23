@@ -1,25 +1,25 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <stdbool.h>
-#include "terminal.h"
-#include "render.h"
-#include "player.h"
 #include "level.h"
+#include "player.h"
+#include "render.h"
+#include "terminal.h"
+#include <stdbool.h>
 
 typedef struct {
-    Terminal terminal;
-    ScreenBuffer *screen;
-    Player player;
-    Level level;
-    bool running;
-    double last_time;
-    float camera_x;
-    float camera_y;
-    float spawn_x;
-    float spawn_y;
-    bool paused;
-    bool victory;
+  Terminal terminal;
+  ScreenBuffer *screen;
+  Player player;
+  Level level;
+  bool running;
+  double last_time;
+  float camera_x;
+  float camera_y;
+  float spawn_x;
+  float spawn_y;
+  bool paused;
+  bool victory;
 } Game;
 
 // Initialize game
