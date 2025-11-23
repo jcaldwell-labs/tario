@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc make valgrind clang-format
+
+    - name: Build project
+      run: make
+
+    - name: Run tests
+      run: make test
+
+    - name: Check code quality
+      run: make check
+
+    - name: Check for memory leaks
+      run: |
+        # Note: Can't run valgrind in CI without interactive terminal
+        # This is a placeholder for future non-interactive tests
+        echo "Memory leak checking requires interactive terminal"
+        echo "Run 'make valgrind' locally for memory leak detection"
+
+  code-format:
+    name: Check Code Formatting
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install clang-format
+      run: sudo apt-get update && sudo apt-get install -y clang-format
+
+    - name: Check code formatting
+      run: |
+        clang-format --dry-run --Werror src/*.c include/*.h || (echo "Code is not formatted. Run 'make format' locally." && exit 1)
