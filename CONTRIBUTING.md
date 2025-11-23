@@ -72,7 +72,7 @@ make run
 # Memory leak check
 valgrind --leak-check=full ./tario
 
-# Run test suite (once implemented)
+# Run test suite
 make test
 ```
 
@@ -199,11 +199,11 @@ Before submitting a PR, test your changes by:
 
 ### Automated Testing
 
-When the test suite is implemented:
-- Add unit tests for new functions
+Automated tests are available for Tario. Please ensure that you:
+- Add unit tests for any new functions
 - Add integration tests for new features
-- Ensure all existing tests pass
-- Aim for reasonable test coverage of new code
+- Ensure all existing tests pass before submitting your PR
+- Aim for reasonable test coverage of all new code
 
 ## Pull Request Process
 

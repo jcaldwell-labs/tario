@@ -38,7 +38,7 @@ make debug
 # Check for memory leaks (requires valgrind)
 valgrind --leak-check=full ./tario
 
-# Run tests (once test suite is created)
+# Run tests
 make test
 ```
 

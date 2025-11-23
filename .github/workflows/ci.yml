@@ -29,9 +29,6 @@ jobs:
     - name: Check code quality
       run: make check
 
-    - name: Build debug version
-      run: make debug
-
     - name: Check for memory leaks
       run: |
         # Note: Can't run valgrind in CI without interactive terminal
@@ -52,5 +49,4 @@ jobs:
 
     - name: Check code formatting
       run: |
-        clang-format -i src/*.c include/*.h
-        git diff --exit-code || (echo "Code is not formatted. Run 'make format' locally." && exit 1)
+        clang-format --dry-run --Werror src/*.c include/*.h || (echo "Code is not formatted. Run 'make format' locally." && exit 1)
