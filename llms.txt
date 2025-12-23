@@ -94,6 +94,34 @@ Friction:       0.85x per frame
 
 https://github.com/jcaldwell-labs/tario
 
+## Related jcaldwell-labs Projects
+
+Tario is part of the jcaldwell-labs ecosystem. These sister projects share patterns and offer integration opportunities:
+
+### Terminal/TUI Projects
+- **my-grid** - ASCII canvas editor with vim-style navigation, zones, PTY support. *Synergy: Could serve as foundation for a visual Tario level editor.*
+- **boxes-live** - Real-time ASCII box drawing with joystick support. *Synergy: Joystick input patterns applicable for gamepad controls.*
+- **terminal-stars** - Starfield animation for terminals. *Synergy: Background parallax effects for night/space themed levels.*
+- **atari-style** - Retro visual effects and shaders for terminal apps. *Synergy: CRT scanlines, color bleeding, and retro aesthetics.*
+- **smartterm-prototype** - Smart terminal with readline-like features.
+
+### CLI Tools
+- **my-context** - Context tracking for development sessions (Go CLI).
+- **fintrack** - Personal finance tracking CLI (Go).
+
+### Game Engines
+- **adventure-engine-v2** - Multiplayer text adventure engine (C). *Synergy: Shared C patterns for terminal games, game loop architecture, and signal handling.*
+
+### Meta/Organization
+- **capability-catalog** - Skill/capability definitions for AI agents.
+
+### Key Synergies
+1. **atari-style + Tario**: Apply CRT effects, scanlines, and color bleeding for authentic retro visuals
+2. **terminal-stars + Tario**: Integrate starfield as parallax background layer for space/night levels
+3. **my-grid + Tario**: Build visual level editor using my-grid's ASCII canvas capabilities
+4. **boxes-live + Tario**: Port joystick input handling for gamepad support
+5. **adventure-engine-v2 + Tario**: Share terminal handling code, signal management, and game loop patterns
+
 ## License
 
 MIT License

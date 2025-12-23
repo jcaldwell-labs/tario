@@ -273,6 +273,41 @@ Check the [issue tracker](https://github.com/jcaldwell-labs/tario/issues) for is
 
 ---
 
+## Related jcaldwell-labs Projects
+
+Tario is part of the [jcaldwell-labs](https://github.com/jcaldwell-labs) ecosystem of terminal-focused tools and games.
+
+### Terminal/TUI Projects
+
+| Project | Description | Synergy with Tario |
+|---------|-------------|-------------------|
+| [my-grid](https://github.com/jcaldwell-labs/my-grid) | ASCII canvas editor with vim-style navigation | Level editor foundation - could edit Tario levels visually |
+| [boxes-live](https://github.com/jcaldwell-labs/boxes-live) | Real-time ASCII box drawing with joystick support | Joystick input patterns for gamepad support in Tario |
+| [terminal-stars](https://github.com/jcaldwell-labs/terminal-stars) | Starfield animation for terminals | Background effects for Tario's night/space levels |
+| [atari-style](https://github.com/jcaldwell-labs/atari-style) | Retro visual effects and shaders for terminals | CRT effects, scanlines, and retro aesthetics for Tario |
+| [smartterm-prototype](https://github.com/jcaldwell-labs/smartterm-prototype) | Smart terminal with readline-like features | Enhanced terminal input handling patterns |
+
+### CLI Tools
+
+| Project | Description |
+|---------|-------------|
+| [my-context](https://github.com/jcaldwell-labs/my-context) | Context tracking for development sessions (Go) |
+| [fintrack](https://github.com/jcaldwell-labs/fintrack) | Personal finance tracking CLI (Go) |
+
+### Game Engines
+
+| Project | Description | Synergy with Tario |
+|---------|-------------|-------------------|
+| [adventure-engine-v2](https://github.com/jcaldwell-labs/adventure-engine-v2) | Multiplayer text adventure engine (C) | Shared C patterns, terminal handling, game loop architecture |
+
+### Meta/Organization
+
+| Project | Description |
+|---------|-------------|
+| [capability-catalog](https://github.com/jcaldwell-labs/capability-catalog) | Skill/capability definitions for AI agents |
+
+---
+
 ## License
 
 This project is provided under the MIT License. See [LICENSE](LICENSE) for details.
