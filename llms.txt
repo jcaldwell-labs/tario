@@ -1,0 +1,99 @@
+# Tario
+
+> A low-level ASCII side-scrolling platformer game built entirely in C using ANSI escape codes for terminal rendering.
+
+## What is Tario?
+
+Tario is an educational platformer game that demonstrates low-level game development in C. It features complete physics simulation, advanced jump mechanics (coyote time, jump buffering), double-buffered rendering, and a scrolling camera system - all without external dependencies beyond the standard C library.
+
+## Key Capabilities
+
+- Complete platformer physics: gravity, velocity, friction, AABB collision detection
+- Advanced jump mechanics: variable height, coyote time (0.15s), jump buffering (0.1s)
+- 60 FPS game loop with frame-independent physics using delta time
+- Double-buffered terminal rendering for flicker-free display
+- Scrolling camera system with viewport culling
+
+## Quick Start
+
+```bash
+git clone https://github.com/jcaldwell-labs/tario.git
+cd tario
+make
+./tario
+```
+
+## Common Commands
+
+| Command | Description |
+|---------|-------------|
+| `make` | Build release version |
+| `make debug` | Build with debug symbols |
+| `make clean` | Remove build artifacts |
+| `make run` | Build and run |
+| `make test` | Run test suite |
+| `valgrind --leak-check=full ./tario` | Check for memory leaks |
+
+## Controls
+
+- **A/Left Arrow**: Move left
+- **D/Right Arrow**: Move right
+- **W/Up Arrow/Space**: Jump
+- **P**: Pause/Unpause
+- **Q/ESC**: Quit
+
+## Use Cases
+
+1. **Learning low-level game development** - Study physics, game loops, and collision detection implementation in pure C
+2. **Teaching game programming** - Demonstrate core concepts without engine overhead
+3. **Terminal graphics techniques** - Learn double buffering, ANSI escape codes, and viewport management
+4. **Extending the game** - Add levels, enemies, power-ups using the modular architecture
+
+## Architecture Overview
+
+The game uses a modular C architecture with separate components for game loop management (game.c), player physics and animation (player.c), tile-based level system (level.c), double-buffered rendering (render.c), and terminal control (terminal.c). Physics runs at 60 FPS with delta time for frame independence.
+
+## Project Structure
+
+```
+src/main.c      - Entry point, signal handling
+src/game.c      - Game loop, camera system
+src/player.c    - Physics, animation, collision
+src/level.c     - Tile system, collision queries
+src/render.c    - Double buffering, viewport
+src/terminal.c  - Raw mode, ANSI codes
+include/        - Header files
+tests/          - Test suite
+```
+
+## Technical Details
+
+- **Language**: C99 with POSIX extensions
+- **Dependencies**: None (libc, libm only)
+- **Platform**: Linux, macOS, WSL
+- **Terminal**: ANSI-compatible, 80x24 minimum
+
+## Physics Constants
+
+```c
+Gravity:        25 units/s²
+Jump Force:     15 units/s
+Max Fall Speed: 20 units/s
+Friction:       0.85x per frame
+```
+
+## Documentation
+
+- README.md - Project overview and quick start
+- GAMEPLAY.md - Detailed gameplay mechanics
+- CONTRIBUTING.md - Contribution guidelines
+- LEVEL_FORMAT.md - Level file format specification
+- CLAUDE.md - AI assistant guidance for code understanding
+
+## Repository
+
+https://github.com/jcaldwell-labs/tario
+
+## License
+
+MIT License
